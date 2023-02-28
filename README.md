@@ -1,2 +1,2 @@
 # Oguzkn.github.io
-FİRST WEB SİTES
+Merkez Web Sitesi
