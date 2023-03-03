@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="pasranc_online_script.js"></script>
+
+        <script type="module">
+            import { initializeApp } from "firebase/app";
+            import { getAnalytics } from "firebase/analytics";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyCMa4_Q2TtXHZKjcgbiEFDWHQio_9-f4j0",
+                authDomain: "oguzk-1467d.firebaseapp.com",
+                databaseURL: "https://oguzk-1467d-default-rtdb.firebaseio.com",
+                projectId: "oguzk-1467d",
+                storageBucket: "oguzk-1467d.appspot.com",
+                messagingSenderId: "430568764328",
+                appId: "1:430568764328:web:51427c8682821ca7b6a39d",
+                measurementId: "G-B70BV83C80"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
+
+    </head>
+    <body>
+    
+        <div>
+            <button id="yeni_oyun" onclick="oda_kur()">YENİ OYUN</button>
+            <input type="text" id="oda_kodu" placeholder="ODA KODU">
+        </div>
+        <div>
+            <input type="text" id="oda_kodu_input" >
+            <button id="oda_katil_butonu" onclick="oda_katil(document.getElementById('oda_kodu_input').value)">ODAYA GİR </button>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,266 @@
+
+body{
+    background-color:darkgray;
+}
+#üstbar{
+    
+    height: 150px;
+    
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 20px;
+    
+    
+
+    
+}
+#üst_bar_başlık{
+    margin-top: 40px;
+    font-size: 80px;
+    text-align: center;
+    text-decoration: overline underline;
+    
+    font-family: 'Times New Roman', Times, serif;
+    
+    letter-spacing: 25px;
+    font-weight: bolder;
+    
+
+    
+    
+    
+      
+}
+#ortabar{
+    
+    display: flex;
+    flex-direction: row;
+}
+#ortasolbar{
+    height: 200px;
+    width: 100px;
+    
+    border-bottom-left-radius: 20px;
+    
+}
+.oyun_alanı {
+    
+    display: flex;
+    
+}
+#oyun_tahtası{
+    height: 850px;
+    width: 850px;
+    float: left;
+    
+}
+#harf_dizini {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 850px;
+    color: #264e2b;
+    
+
+}
+#sayı_dizini {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 50px;
+
+
+    
+
+
+}
+span#köşe {
+    width: 50px;
+    height: 50px;
+}
+.harf {
+
+    
+    font-weight: bolder;
+    font-size: 50px;
+    line-height: 20px;
+    
+    width: 85px;
+    height: 30px;
+    margin-left: 15px;
+    margin-top: 15px;
+    
+
+
+}
+#orta{
+    display: flex;
+    flex-direction: row;
+    
+}
+.sayı {
+
+    
+    font-weight: bolder;
+    font-size: 50px;
+    line-height: 20px;
+    
+    width: 50px;
+    height: 85px;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: #264e2b;
+    
+}
+#satırlar{
+    height: 800px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+}
+#A_SATIRI ,#B_SATIRI ,#C_SATIRI ,#D_SATIRI ,#E_SATIRI ,#F_SATIRI ,#G_SATIRI,#H_SATIRI {
+    display: flex;
+    flex-direction: column;
+}
+#A_SATIRI *,#B_SATIRI *,#C_SATIRI *,#D_SATIRI *,#E_SATIRI *,#F_SATIRI *,#G_SATIRI *,#H_SATIRI *{
+    
+    border-width :5px;
+    
+    
+    width :100px;
+    height:100px;
+    text-align: center;
+    border-color:#536a1ec7;
+    color:#94a379;
+    font-weight: bolder;
+    
+
+}
+#oyun_içi_bilgi{
+    height: 850px;
+    width: 250px;
+
+
+}
+#oyun_zamanı{
+    
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 15px;
+    font-size: 20px;
+    display: flex;
+    text-decoration: underline;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+#oyun_saati{
+    height: fit-content;
+    margin: 0px;
+    
+}
+#oyun_sırası{
+
+    font-weight: bolder;
+    color: olivedrab;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 15px;
+    margin-top: 14px;
+    font-size: 27px;
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+#HAMLELER_TABLOSU{
+    flex-direction: column;
+    min-height: 500px;
+    margin-left: 5px;
+    margin-right: 15px;
+    margin-top: 25px;
+    text-align: center;
+    display: flex;
+    text-decoration: underline;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    
+}
+p{
+    
+    font-weight: bolder;
+    font-size: 20px;
+    
+    letter-spacing: 3px;
+    text-decoration: underline;
+
+}
+span_hamle {
+    width: 250px;;
+    display: flex;
+    color: #264e2b;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    
+    
+}
+#oyun_kuralları_ve_başlama_tuşu{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+#oyun_kuralları{
+    
+    width: 450px;
+    height: fit-content;
+    border-top-style: ridge;
+    border-bottom-style: ridge;
+}
+p#nasıl_oynanır{
+    font-weight: bolder;
+}
+
+#başlama_tuşu {
+
+    margin: 140px;
+    padding: 0.1em 0.25em;
+    width: 13em;
+    height: 4.2em;
+    background-color: #212121;
+    border: 0.08em solid #fff;
+    border-radius: 0.3em;
+    font-size: 12px;
+  }
+  
+  #başlama_tuşu #yeni_oyun {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0.4em;
+    width: 8.25em;
+    height: 2.5em;
+    background-color: #212121;
+    border-radius: 0.2em;
+    font-size: 1.5em;
+    color: #fff;
+    border: 0.08em solid #fff;
+    box-shadow: 0 0.4em 0.1em 0.019em #fff;
+  }
+  
+  #başlama_tuşu #yeni_oyun:hover {
+    transition: all 0.5s;
+    transform: translate(0, 0.4em);
+    box-shadow: 0 0 0 0 #fff;
+  }
+  
+  #başlama_tuşu #yeni_oyun:not(hover) {
+    transition: all 1s;
+  }
+  
+  
+   
+
+
+
+
+
