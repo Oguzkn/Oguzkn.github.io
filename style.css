@@ -192,6 +192,36 @@ h2,h4,h6,a{
     
 
 }
+
+#kart_2:hover > #arka_2 >a{
+    margin: 0 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border:1px solid #333;
+    right: 0;
+
+}
+#kart_2:hover > #arka_2 >a:hover{
+    background: #333;
+    color: #fff;
+}
+
+#kart_2:hover > #arka_2 > h2{
+
+    display: flex;
+    margin: 10px 0 0;
+    padding: 0;
+    color: #bdb76b;
+    font-size: 1.5m;
+}
+#kart_2:hover > #arka_2 >h4,h6{
+    display: block;
+    margin: 0;
+    transition: 0.1s;
+}
 #kart_3{
 
     width: 40%;
