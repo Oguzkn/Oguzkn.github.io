@@ -1,3 +1,7 @@
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
 function oda_kur(prm_oda_id,prm_oyuncu_id){
     set(
         ref(db ,'oda_id/'+prm_oda_id),{
