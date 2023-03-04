@@ -1,18 +1,7 @@
-/*
-function writeUserData(userId, name, email, imageUrl) {
-    const db = getDatabase();
-    set(ref(db, 'users/' + userId), {
-      username: name,
-      email: email,
-      profile_picture : imageUrl
-    });
-  }
-*/  
-
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js'
-import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js'
-import { getAuth } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js'
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js'
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js';
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 
 const firebaseConfig = {
@@ -26,14 +15,12 @@ const firebaseConfig = {
     measurementId: "G-B70BV83C80"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
 const analytics = getAnalytics(app);
 
 function oda_kur(prm_oda_id,prm_oyuncu_id){
 
-    const db = getDatabase();
+    const db = getDatabase(app);
     
     set(ref(db ,'oda_id/'+prm_oda_id),{
         oyuncu_id:prm_oyuncu_id
