@@ -1,17 +1,11 @@
 <html>
     <head>
         <script src="pasranc_online_script.js"></script>
-
         <script type="module">
             import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js'
-
-
             import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js'
-
-
             import { getAuth } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js'
             import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js'
-
             import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 
             const firebaseConfig = {
@@ -35,7 +29,7 @@
     <body>
     
         <div>
-            <button id="yeni_oyun" onclick="oda_kur()">YENİ OYUN</button>
+            <button id="yeni_oyun" onclick="oda_kur(1808,'ahmet')">YENİ OYUN</button>
             <input type="text" id="oda_kodu" placeholder="ODA KODU">
         </div>
         <div>

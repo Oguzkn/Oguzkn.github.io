@@ -1,7 +1,21 @@
+/*
+function writeUserData(userId, name, email, imageUrl) {
+    const db = getDatabase();
+    set(ref(db, 'users/' + userId), {
+      username: name,
+      email: email,
+      profile_picture : imageUrl
+    });
+  }
+*/  
+function oda_kur(prm_oda_id,prm_oyuncu_id){
 
-function oda_kur(){
-    var oda_kodu = 1808
-    var oda_array = {oda_id:oda_kodu,name:"mehmet"};
+    const db = getDatabase();
+    
+    set(ref(db ,'oda_id/'+prm_oda_id),{
+        oyuncu_id:prm_oyuncu_id
+    });
+
     document.getElementById("oda_kodu").value=oda_kodu;
     console.log("oda_kur calişti");
 
