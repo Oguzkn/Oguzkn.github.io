@@ -2,7 +2,7 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyCMa4_Q2TtXHZKjcgbiEFDWHQio_9-f4j0",
     authDomain: "oguzk-1467d.firebaseapp.com",
     databaseURL: "https://oguzk-1467d-default-rtdb.firebaseio.com",
@@ -13,10 +13,10 @@ const firebaseConfig = {
     measurementId: "G-B70BV83C80"
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+export const app = initializeApp(firebaseConfig);
+export const db = getDatabase(app);
 
-function oda_kur(prm_oda_id,prm_oyuncu_id){
+export function oda_kur(prm_oda_id,prm_oyuncu_id){
     set(
         ref(db ,'oda_id/'+prm_oda_id),{
             oyuncu_id:prm_oyuncu_id
@@ -28,7 +28,7 @@ function oda_kur(prm_oda_id,prm_oyuncu_id){
 }
 
 
-function oda_katil(prm_oda_kodu){
+export function oda_katil(prm_oda_kodu){
     
     if(prm_oda_kodu == json_to_array.oda_id){
         console.log("oda_katil çalişti  :  "+prm_oda_kodu);
