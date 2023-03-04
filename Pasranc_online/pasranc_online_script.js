@@ -1,6 +1,5 @@
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
-import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js';
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 
 const firebaseConfig = {
@@ -16,15 +15,13 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-const analytics = getAnalytics(app);
-
 
 function oda_kur(prm_oda_id,prm_oyuncu_id){
     set(
         ref(db ,'oda_id/'+prm_oda_id),{
-        oyuncu_id:prm_oyuncu_id
+            oyuncu_id:prm_oyuncu_id
     });
-    
+
     document.getElementById("oda_kodu").value=oda_kodu;
     console.log("oda_kur calişti");
 
