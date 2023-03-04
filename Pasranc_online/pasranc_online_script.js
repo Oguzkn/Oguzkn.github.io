@@ -19,13 +19,12 @@ const db = getDatabase(app);
 const analytics = getAnalytics(app);
 
 
-export function oda_kur(prm_oda_id,prm_oyuncu_id){
-
-    const db = getDatabase(app);
-    
-    set(ref(db ,'oda_id/'+prm_oda_id),{
+function oda_kur(prm_oda_id,prm_oyuncu_id){
+    set(
+        ref(db ,'oda_id/'+prm_oda_id),{
         oyuncu_id:prm_oyuncu_id
     });
+    
     document.getElementById("oda_kodu").value=oda_kodu;
     console.log("oda_kur calişti");
 
