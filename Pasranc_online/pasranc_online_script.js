@@ -21,3 +21,4 @@ function oda_katil(prm_oda_kodu){
     }
     
 }
+export {oda_kur};
