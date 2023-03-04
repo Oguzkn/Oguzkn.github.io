@@ -1,3 +1,5 @@
+import {db} from './database_import.js'
+
 function oda_kur(prm_oda_id,prm_oyuncu_id){
     set(
         ref(db ,'oda_id/'+prm_oda_id),{
@@ -8,7 +10,6 @@ function oda_kur(prm_oda_id,prm_oyuncu_id){
     console.log("oda_kur calişti");
 
 }
-
 
 function oda_katil(prm_oda_kodu){
     
