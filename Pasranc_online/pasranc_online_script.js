@@ -1,4 +1,4 @@
-import {getDatabase, ref, set} from "database_import_script.js";
+import {getDatabase, ref, set} from '/database_import_script.js';
 
 function oda_kur(prm_oda_id,prm_oyuncu_id){
 
