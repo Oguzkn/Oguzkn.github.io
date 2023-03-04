@@ -1,8 +1,8 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js';
-import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js';
-import { getAuth } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js';
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js'
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js'
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js'
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js'
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyCMa4_Q2TtXHZKjcgbiEFDWHQio_9-f4j0",
@@ -16,6 +16,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 const analytics = getAnalytics(app);
 
 function oda_kur(prm_oda_id,prm_oyuncu_id){
