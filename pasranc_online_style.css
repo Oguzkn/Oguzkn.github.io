@@ -1,0 +1,317 @@
+@font-face {font-family:Kusanagi; src:url(style-file/Kusanagi.otf);}
+@font-face {font-family: design-font;src: url(style-file/design-font.otf);}
+body{
+    width: fit-content;
+    height: fit-content;
+}
+/*----------------oyun giriş ekranı masaüstü--------------------------*/
+#oyun_giriş_ekranı{
+    display: flex;/* flex yada none olacak unutma */
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    margin:-1vw;
+    justify-items:center;
+    justify-content: space-between;
+    align-items: stretch;
+     
+}
+#solbar{
+    width: 60vw;
+    height: 100vh;
+    background: #383e42;
+}
+h1,h2 {
+    font-size: 7vw;
+    font-family: Kusanagi,sans-serif;
+    color: rgb(255, 248, 136);
+    text-shadow: rgb(189 184 107) 0px 0px 20px; 
+}
+h1{
+    text-align: start;
+    margin:4vw 1vw 0vw 3vw;
+}
+h2{
+    text-align: center;
+}
+h1:hover,h2:hover{
+    color:#fffcce;
+    transition: 0.8s;
+    text-shadow: rgb(255 248 136) 0px 0px 40px;
+ 
+}
+#tasarımcı{
+    font-family: design-font,sans-serif;
+    color: rgb(255, 248, 136);
+    
+    font-size: 2.5vw;
+    text-align:start;
+}
+#sağbar{
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    background: #000; 
+}
+p{
+    font-size: 4.5vw;
+    width: 35vw;
+    margin-left: 3vw;
+    font-family: 'Barlow Semi Condensed Bold', sans-serif;
+    font-weight: bolder;
+}
+#oda_kur_divi{
+    width: 30vw;
+    height: 15vw;
+    background: #bdb76b;
+    color: #383e42;
+    border-radius: 50px;
+    margin: 5vw 5vw 5vw 5vw;
+    
+}
+#oda_katıl_kart_arka,#oda_kur_kart_arka{
+    display: none;
+}
+#oda_kur_divi:hover #oda_kur_kart_arka{
+    margin :3vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+#oda_kur_divi:hover #oda_kur_kart_ön{
+    display: none;
+    transition:  0.8s;
+
+}
+#oda_katıl_divi{
+    width: 30vw;
+    height: 15vw;
+    background:#383e42;
+    color: #bdb76b;
+    margin: 5vw 5vw 10vw 5vw;
+    border-radius: 50px;
+}
+#oda_katıl_divi:hover #oda_katıl_kart_arka{
+    margin:3vw;
+    display: flex;
+    flex-direction: column;
+}
+#oda_katıl_divi:hover #oda_katıl_kart_ön{
+    display: none;
+}
+input{
+    height: 3vw;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 15px;
+  border: none;
+  padding: 0 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #4B4B4B;
+}
+input:hover{
+    transform: scale(1.009);
+  box-shadow: 0px 0px 3px 0px #212529;
+}
+button{
+    width: 100%;
+  height: 3vw;
+  font-size: 14px;
+  color: white;
+  background: red;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    #oyun_giriş_ekranı{
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        justify-content: start;
+    }
+    #solbar{
+        height: 20vh;
+        width:100vw;
+    }
+    h1{
+        text-align: center;
+    }
+    #sağbar{
+        height: 80vh;
+        width: 100vw;
+    }
+    #oda_kur_divi,#oda_katıl_divi{
+        width: 80vw;
+        height: 20vh;
+        margin-left: 10vw;   
+    }
+    p{
+        margin: 8vw 0vw 0vw 21vw;
+        font-size: 12vw;
+        text-align: center;
+    }
+    input,button{
+        width:90% ;
+        height: 8vh;
+        font-size: 2vh;
+        align-content: center;
+        margin: auto; 
+    }
+}
+/*--------------------- oyun ekranı ------------------------*/
+#oyun_ekranı{
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-1vw, -1vh);
+}
+#oyun_ekran_üst_bar{
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    background-color: #4B4B4B;
+
+}
+#oyun_ekran_alt_bar{
+    
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 85vh;
+
+
+}
+#oyun_tahtası{
+    display: none;/* flex yada none olacak unutma */
+    flex-direction: column;
+    scale: 1.5;
+    transform: translate(7vw, 12vh);
+    height: fit-content;
+}
+#harf_dizini{
+    width: 510px;
+    background:#4B4B4B;
+    letter-spacing: 24px;
+    text-align: end;
+}
+#numaralar_ve_kareler{
+    display: flex;
+    flex-direction: row;
+}
+#numara_dizini{
+    scale: 1.2;
+    transform: translate(0vw, 3.9999999vh);
+}
+.numaralar{
+    width: 30px;
+    height:50px;
+    color: #bdb76b;
+    background-color: #4B4B4B;
+    text-align: center;
+    margin-top: 0px;
+}
+.kareler {
+    width: 50px;
+    height: 50px;
+    border:5px solid;
+    border-color: #383e42;
+    background:#bdb76b;
+
+}
+#hamleler{
+    width: 20vw;
+    height: 75vh;
+    background: #bdb76b;
+    transform: translate(20vw, 5vh);
+}
+#hamleler_başlık{
+    background: #4B4B4B;
+    width: 20vw;
+    height: 4vh;
+    font-size: 2vw;
+    color: #bdb76b;
+
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    #oyun_ekranı{
+        display: flex;
+        flex-direction: column ;
+        width: 160vw;
+        height: 160vh;
+    }
+    #oyun_ekran_üst_bar{
+        display: flex;
+        width: 160vw;
+        height: 15vh;
+        background-color: #4B4B4B;
+    
+    }
+    #oyun_ekran_alt_bar{
+        
+        display: flex;
+        flex-direction: column;
+        width: 160vw;
+        height: 85vh;
+    
+    
+    }
+    #oyun_tahtası{
+        display: none;/* flex yada none olacak unutma */
+        flex-direction: column;
+        scale: 2.8;
+        transform: translate(55vw, 10vh);
+    }
+    #harf_dizini{
+        width: 510px;
+        background:#4B4B4B;
+        letter-spacing: 24px;
+        text-align: end;
+    }
+    #numaralar_ve_kareler{
+        display: flex;
+        flex-direction: row;
+    }
+    #numara_dizini{
+        scale: 1.2;
+        transform: translate(-0.3vw, 1.9vh);
+    }
+    .numaralar{
+        width: 30px;
+        height:50px;
+        color: #bdb76b;
+        background-color: #4B4B4B;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .kareler {
+        width: 50px;
+        height: 50px;
+        border:5px solid;
+        border-color: #383e42;
+        background:#bdb76b;
+    
+    }
+    #hamleler{
+        width: 150vw;
+        height: fit-content;
+        background: #bdb76b;
+        transform: translate(5vw, 50vh);
+    }
+    #hamleler_başlık{
+        background: #212529;
+        width:150vw;
+        height: 3vh;
+        color: #bdb76b;
+        font-size: 5vw;
+        margin: 0;
+    }
+
+
+}
+
