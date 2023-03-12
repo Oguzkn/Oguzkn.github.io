@@ -5,6 +5,95 @@ body{
     height: fit-content;
 }
 /*----------------oyun giriş ekranı masaüstü--------------------------*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    #oyun_giriş_ekranı{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        justify-content: start;
+        margin:-1vw;
+        justify-items:center;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    #solbar{
+        height: 20vh;
+        width:100vw;
+        background: #383e42;
+    }
+    h1{
+        text-align: center;
+        margin:4vw 1vw 0vw 3vw;
+    }
+    h1,h2 {
+        font-size: 7vw;
+        font-family: Kusanagi,sans-serif;
+        color: rgb(255, 248, 136);
+        text-shadow: rgb(189 184 107) 0px 0px 20px; 
+    }
+    h2{
+        text-align: center;
+    }
+    #tasarımcı{
+        font-family: design-font,sans-serif;
+        color: rgb(255, 248, 136);
+        
+        font-size: 2.5vw;
+        text-align:start;
+    }
+    #sağbar{
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column; 
+        background: #000; 
+        justify-content: space-evenly;
+    }
+    #oda_kur_divi,#oda_katıl_divi{
+        width: 80vw;
+        height: 20vh;
+        margin-left: 10vw;
+        background: #bdb76b;
+        color: #383e42;
+        border-radius: 50px;
+      
+    }
+    #oda_katıl_kart_arka,#oda_kur_kart_arka{
+        margin :3vw;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    #oda_katıl_kart_ön,#oda_kur_kart_ön{
+        display: none;
+    }
+    p{
+        margin: 8vw 0vw 0vw 21vw;
+        font-size: 12vw;
+        text-align: center;
+        width: 35vw;
+        margin-left: 3vw;
+        font-family: 'Barlow Semi Condensed Bold', sans-serif;
+        font-weight: bolder;
+    }
+    input,button{
+        width:80% ;
+        height: 6vh;
+        font-size: 2vh;
+        align-content: center;
+        margin: auto; 
+    }
+    button{
+      color: white;
+      background:#4B4B4B;
+      border-radius: 5px;
+      border: none;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+}
+@media only screen and (min-device-width : 480px) {
 #oyun_giriş_ekranı{
     display: flex;/* flex yada none olacak unutma */
     flex-direction: row;
@@ -126,45 +215,11 @@ button{
   font-weight: 500;
   text-transform: uppercase;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-    #oyun_giriş_ekranı{
-        flex-direction: column;
-        height: 100vh;
-        width: 100vw;
-        justify-content: start;
-    }
-    #solbar{
-        height: 20vh;
-        width:100vw;
-    }
-    h1{
-        text-align: center;
-    }
-    #sağbar{
-        height: 80vh;
-        width: 100vw;
-    }
-    #oda_kur_divi,#oda_katıl_divi{
-        width: 80vw;
-        height: 20vh;
-        margin-left: 10vw;   
-    }
-    p{
-        margin: 8vw 0vw 0vw 21vw;
-        font-size: 12vw;
-        text-align: center;
-    }
-    input,button{
-        width:90% ;
-        height: 8vh;
-        font-size: 2vh;
-        align-content: center;
-        margin: auto; 
-    }
 }
 /*--------------------- oyun ekranı ------------------------*/
+@media only screen and (min-device-width : 481px){
 #oyun_ekranı{
-    display: flex;
+    display: none;
     flex-direction: column;
     background: #000;
     width: 100vw;
@@ -188,7 +243,7 @@ button{
 
 }
 #oyun_tahtası{
-    display: none;/* flex yada none olacak unutma */
+    display: flex;
     flex-direction: column;
     scale: 1.5;
     transform: translate(7vw, 12vh);
@@ -236,11 +291,11 @@ button{
     height: 4vh;
     font-size: 2vw;
     color: #bdb76b;
-
+}
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
     #oyun_ekranı{
-        display: flex;
+        display: none;
         flex-direction: column ;
         width: 160vw;
         height: 160vh;
@@ -262,7 +317,7 @@ button{
     
     }
     #oyun_tahtası{
-        display: none;/* flex yada none olacak unutma */
+        display: flex;
         flex-direction: column;
         scale: 2.8;
         transform: translate(55vw, 10vh);
