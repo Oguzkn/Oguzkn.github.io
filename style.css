@@ -292,7 +292,7 @@ h2,h4,h6,a{
         display: none;
     }
 
-    #kart_1:hover > #arka_1 >a{
+    #kart_1:active > #arka_1 >a{
         margin: 0 0 0;
         display: inline-block;
         text-decoration: none;
@@ -303,12 +303,12 @@ h2,h4,h6,a{
         right: 0;
     
     }
-    #kart_1:hover > #arka_1 >a:hover{
+    #kart_1:active > #arka_1 >a:active{
         background: #333;
         color: #fff;
     }
     
-    #kart_1:hover > #arka_1 > h2{
+    #kart_1:active > #arka_1 > h2{
     
         display: flex;
         margin: 1vw 0 0 1vw;
@@ -316,7 +316,7 @@ h2,h4,h6,a{
         color: #bdb76b;
         font-size: 3.5vw;
     }
-    #kart_1:hover > #arka_1 >h4,h6,a{
+    #kart_1:active > #arka_1 >h4,h6,a{
         display: block;
         margin: 0;
         font-size: 2.5vw;
@@ -329,7 +329,7 @@ h2,h4,h6,a{
         bottom: 3vw;
         font-size: 11vw;
     }
-    #kart_1:hover >#ön_1>#kart_1_başlık{
+    #kart_1:active >#ön_1>#kart_1_başlık{
         color: #383e42;
         letter-spacing: 0vw;
         font-size: 3vw;
@@ -337,7 +337,7 @@ h2,h4,h6,a{
         margin-top:5%; 
         height: 15%;   
     }
-    #kart_2:hover > #ön_2 > #başlık_2{
+    #kart_2:active > #ön_2 > #başlık_2{
         color: #bdb76b;
         margin-top: 20%;
         font-size: 4vw;
