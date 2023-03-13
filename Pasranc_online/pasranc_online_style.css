@@ -247,16 +247,13 @@ button{
         flex-direction: column;
         
     }
-    
     #numaralar_ve_kareler{
         display: flex;
         flex-direction: row;
     }
-    
-    
     .kareler {
-        width: 12vw;
-        height: 12vw;
+        width: 13vw;
+        height: 13vw;
         border:5px solid;
         border-color: #383e42;
         background:#bdb76b;
@@ -277,8 +274,6 @@ button{
         font-size: 5vw;
         margin: 0;
     }
-
-
 }
 @media only screen and (min-device-width : 480px){
 #oyun_ekranı{
