@@ -258,8 +258,8 @@ button{
         flex-direction: row;
     }
     #numara_dizini{
-        scale: 1.2;
-        transform: translate(-0.3vw, 1.9vh);
+        color: #bdb76b;
+        
     }
     .numaralar{
         width: 30px;
