@@ -229,6 +229,7 @@ button{
         width: 100vw;
         height: 15vh;
         background-color: #4B4B4B;
+        background-size:50px;
     
     }
     #oyun_ekran_alt_bar{
