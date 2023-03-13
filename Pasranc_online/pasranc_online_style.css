@@ -267,7 +267,7 @@ button{
         width: 150vw;
         height: fit-content;
         background: #bdb76b;
-        transform: translate(5vw, 50vh);
+        
     }
     #hamleler_başlık{
         background: #212529;
@@ -304,8 +304,6 @@ button{
 #oyun_tahtası{
     display: flex;
     flex-direction: column;
-    scale: 1.5;
-    transform: translate(7vw, 12vh);
     height: fit-content;
 }
 #numaralar_ve_kareler{
@@ -313,18 +311,19 @@ button{
     flex-direction: row;
 }
 .kareler {
-    width: 50px;
-    height: 50px;
+    width: 17vw;
+    height: 17vw;
     border:5px solid;
     border-color: #383e42;
     background:#bdb76b;
-
+    background-size: contain;
+    font-size: -webkit-xxx-large;
 }
 #hamleler{
     width: 20vw;
     height: 75vh;
     background: #bdb76b;
-    transform: translate(20vw, 5vh);
+    
 }
 #hamleler_başlık{
     background: #4B4B4B;
