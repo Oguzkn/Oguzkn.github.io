@@ -238,14 +238,11 @@ button{
         flex-direction: column;
         width: 100vw;
         height: 85vh;
-    
-    
     }
     #oyun_tahtası{
         display: flex;
         flex-direction: column;
         
-        transform: translate(55vw, 10vh);
     }
     #harf_dizini{
         width: 510px;
@@ -294,9 +291,7 @@ button{
 
 
 }
-
-
-@media only screen and (min-device-width : 481px){
+@media only screen and (min-device-width : 480px){
 #oyun_ekranı{
     display: none;
     flex-direction: column;
