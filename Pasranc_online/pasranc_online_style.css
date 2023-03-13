@@ -244,7 +244,7 @@ button{
     #oyun_tahtası{
         display: flex;
         flex-direction: column;
-        scale: 2.8;
+        
         transform: translate(55vw, 10vh);
     }
     #harf_dizini{
