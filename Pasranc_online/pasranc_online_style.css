@@ -217,82 +217,6 @@ button{
 }
 }
 /*--------------------- oyun ekranı ------------------------*/
-@media only screen and (min-device-width : 481px){
-#oyun_ekranı{
-    display: none;
-    flex-direction: column;
-    background: #000;
-    width: 100vw;
-    height: 100vh;
-    transform: translate(-1vw, -1vh);
-}
-#oyun_ekran_üst_bar{
-    display: flex;
-    width: 100vw;
-    height: 15vh;
-    background-color: #4B4B4B;
-
-}
-#oyun_ekran_alt_bar{
-    
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 85vh;
-
-
-}
-#oyun_tahtası{
-    display: flex;
-    flex-direction: column;
-    scale: 1.5;
-    transform: translate(7vw, 12vh);
-    height: fit-content;
-}
-#harf_dizini{
-    width: 510px;
-    background:#4B4B4B;
-    letter-spacing: 24px;
-    text-align: end;
-}
-#numaralar_ve_kareler{
-    display: flex;
-    flex-direction: row;
-}
-#numara_dizini{
-    scale: 1.2;
-    transform: translate(0vw, 3.9999999vh);
-}
-.numaralar{
-    width: 30px;
-    height:50px;
-    color: #bdb76b;
-    background-color: #4B4B4B;
-    text-align: center;
-    margin-top: 0px;
-}
-.kareler {
-    width: 50px;
-    height: 50px;
-    border:5px solid;
-    border-color: #383e42;
-    background:#bdb76b;
-
-}
-#hamleler{
-    width: 20vw;
-    height: 75vh;
-    background: #bdb76b;
-    transform: translate(20vw, 5vh);
-}
-#hamleler_başlık{
-    background: #4B4B4B;
-    width: 20vw;
-    height: 4vh;
-    font-size: 2vw;
-    color: #bdb76b;
-}
-}
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
     #oyun_ekranı{
         display: none;
@@ -370,3 +294,80 @@ button{
 
 }
 
+
+@media only screen and (min-device-width : 481px){
+#oyun_ekranı{
+    display: none;
+    flex-direction: column;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-1vw, -1vh);
+}
+#oyun_ekran_üst_bar{
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    background-color: #4B4B4B;
+
+}
+#oyun_ekran_alt_bar{
+    
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 85vh;
+
+
+}
+#oyun_tahtası{
+    display: flex;
+    flex-direction: column;
+    scale: 1.5;
+    transform: translate(7vw, 12vh);
+    height: fit-content;
+}
+#harf_dizini{
+    width: 510px;
+    background:#4B4B4B;
+    letter-spacing: 24px;
+    text-align: end;
+}
+#numaralar_ve_kareler{
+    display: flex;
+    flex-direction: row;
+}
+#numara_dizini{
+    scale: 1.2;
+    transform: translate(0vw, 3.9999999vh);
+}
+.numaralar{
+    width: 30px;
+    height:50px;
+    color: #bdb76b;
+    background-color: #4B4B4B;
+    text-align: center;
+    margin-top: 0px;
+}
+.kareler {
+    width: 50px;
+    height: 50px;
+    border:5px solid;
+    border-color: #383e42;
+    background:#bdb76b;
+
+}
+#hamleler{
+    width: 20vw;
+    height: 75vh;
+    background: #bdb76b;
+    transform: translate(20vw, 5vh);
+}
+#hamleler_başlık{
+    background: #4B4B4B;
+    width: 20vw;
+    height: 4vh;
+    font-size: 2vw;
+    color: #bdb76b;
+}
+}
