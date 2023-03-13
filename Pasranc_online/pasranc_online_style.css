@@ -4,7 +4,7 @@ body{
     width: fit-content;
     height: fit-content;
 }
-/*----------------oyun giriş ekranı masaüstü--------------------------*/
+/*----------------oyun giriş ekranı --------------------------*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
     #oyun_giriş_ekranı{
         display: flex;
@@ -297,12 +297,12 @@ button{
     #oyun_ekranı{
         display: none;
         flex-direction: column ;
-        width: 160vw;
-        height: 160vh;
+        width: 100vw;
+        height: 100vh;
     }
     #oyun_ekran_üst_bar{
         display: flex;
-        width: 160vw;
+        width: 100vw;
         height: 15vh;
         background-color: #4B4B4B;
     
@@ -311,7 +311,7 @@ button{
         
         display: flex;
         flex-direction: column;
-        width: 160vw;
+        width: 100vw;
         height: 85vh;
     
     
