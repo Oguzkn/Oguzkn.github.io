@@ -229,7 +229,7 @@ button{
     }
     #oyun_ekran_üst_bar{
         display: flex;
-        width: 100vw;
+        width: 150vw;
         height: 15vh;
         background-color: #4B4B4B;
        
@@ -248,7 +248,7 @@ button{
         
     }
     #harf_dizini{
-        width: 510px;
+        width: 150vw;
         background:#4B4B4B;
         letter-spacing: 24px;
         text-align: end;
@@ -262,8 +262,8 @@ button{
         
     }
     .numaralar{
-        width: 30px;
-        height:50px;
+        width: 5vw;
+        height:8.4vh;
         color: #bdb76b;
         background-color: #4B4B4B;
         text-align: center;
