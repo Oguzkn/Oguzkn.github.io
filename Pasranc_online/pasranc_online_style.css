@@ -275,6 +275,7 @@ button{
         border:5px solid;
         border-color: #383e42;
         background:#bdb76b;
+        background-size: contain;
     
     }
     #hamleler{
