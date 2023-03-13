@@ -311,13 +311,13 @@ button{
     flex-direction: row;
 }
 .kareler {
-    width: 17vw;
-    height: 17vw;
+    width: 4vw;
+    height: 14vw;
     border:5px solid;
     border-color: #383e42;
     background:#bdb76b;
     background-size: contain;
-    font-size: -webkit-xxx-large;
+    font-size: 1vw;
 }
 #hamleler{
     width: 20vw;
