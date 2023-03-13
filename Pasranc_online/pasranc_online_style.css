@@ -221,8 +221,8 @@ button{
     #oyun_ekranı{
         display: none;
         flex-direction: column ;
-        width: 100vw;
-        height: 100vh;
+        width: 400px;
+        height: 100%;
     }
     #oyun_ekran_üst_bar{
         display: flex;
