@@ -4,7 +4,7 @@ body{
     width: fit-content;
     height: fit-content;
 }
-#oyun_bilgi_divi{
+#oyun_id_bilgi{
     display: none;
 }
 /*----------------oyun giriş ekranı --------------------------*/
