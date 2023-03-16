@@ -415,7 +415,7 @@ window.anlık_hamle_görselleştirme=function(çekilen_veri){// tetik sonrası o
     var konum_2=çekilen_veri.konum_2;
     var cins_2=çekilen_veri.cins_2;
     var cins_1=çekilen_veri.cins_1;
-    //console.log(konum_1+konum_2);
+    
     var ilk_cins=document.getElementById(konum_1).style.backgroundImage;
     var ikinci_cins=document.getElementById(konum_2).style.backgroundImage;
     document.getElementById(konum_1).style.backgroundImage=ikinci_cins;
@@ -425,7 +425,12 @@ window.anlık_hamle_görselleştirme=function(çekilen_veri){// tetik sonrası o
 
     
     son_hamle=çekilen_veri;
-    //console.log(son_hamle);
+    var yeni_span = document.createElement("span_hamle"); //hamle kaydı için her seferinde yeni span etiketi oluşturuyor
+    var cins_1_edit=cins_1.slice(4,9);
+    var yeni_hamle_node = document.createTextNode(cins_1_edit.toUpperCase()+"||"+konum_1+">"+konum_2+"\n");// span etiketi içine eklenecek texti hazırlıyor
+    yeni_span.appendChild(yeni_hamle_node); //spanın içerisine texti ekliyor
+    document.getElementById("hamleler").appendChild(yeni_span);// spanı tablo divine ekliyor
+
     if((cins_1=='b_1_şah')&&(konum_2[1]=='8')){
       var mesaj='Oyun Bitti Beyaz Kazandı';
       alert_bildirim(mesaj);
