@@ -258,7 +258,7 @@ button{
     }
     #oyun_ekran_üst_bar{
         display: flex;
-        width: 150vw;
+        width: 100vw;
         height: 15vh;
         background-color: #4B4B4B;
        
@@ -291,14 +291,14 @@ button{
         font-size: 4vw;
     }
     #hamleler{
-        width: 150vw;
+        width: 100vw;
         height: fit-content;
         background: #bdb76b;
         
     }
     #hamleler_başlık{
         background: #212529;
-        width:150vw;
+        width:100vw;
         height: 3vh;
         color: #bdb76b;
         font-size: 5vw;
