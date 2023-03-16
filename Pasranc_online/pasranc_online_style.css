@@ -255,6 +255,8 @@ button{
         flex-direction: column ;
         width: 100vw;
         height: 100vh;
+        background: #000;
+        
     }
     #oyun_ekran_üst_bar{
         display: flex;
@@ -303,6 +305,12 @@ button{
         color: #bdb76b;
         font-size: 5vw;
         margin: 0;
+    }
+    span_hamle{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1vh;
+        flex-wrap: wrap;
     }
 }
 @media only screen and (min-device-width : 480px){
@@ -362,5 +370,11 @@ button{
     height: 4vh;
     font-size: 2vw;
     color: #bdb76b;
+}
+span_hamle{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1vh;
+    flex-wrap: wrap;
 }
 }
