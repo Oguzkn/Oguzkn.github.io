@@ -26,6 +26,8 @@ window.oda_kur= function (prm_oda_id, prm_p1_id) {
    
     document.getElementById("oyun_giriş_ekranı").style.display='none';
     document.getElementById('oyun_ekranı').style.display='flex';
+
+    document.getElementById('oyuncu_ismi').innerHTML=prm_p1_id;
     console.log('OLUŞTURULAN VE KATILINILAN ODA NUMARASI: '+prm_oda_id);
 
   
@@ -56,11 +58,13 @@ window.oda_katıl=function(prm_oda_id,prm_p2_id){
      document.getElementById('oyun_ekranı').style.display='flex';
 
     var oda_id=document.getElementById('oda_id_bilgi').innerHTML=prm_oda_id;
-    console.log('KATILINILAN ODA NUMARASI: '+prm_oda_id);
 
-    
-     
+    document.getElementById('oyuncu_ismi').innerHTML=prm_p2_id;
+    document.getElementById('rakip_durumu').innerHTML=p_verisi.p1_name;
+    console.log('KATILINILAN ODA NUMARASI: '+prm_oda_id);
+   
 }
+
 //------------------------- oyun ekranı kısmı foksiyonları ve tanımlamaları---------------------------->
 var konum_1=[];var konum_2=[];var cins_1=[];var cins_2=[];var son_hamle={konum_1:"",konum_2:"",cins_1:"",cins_2:""};var konum_yazisi;var oyuncu_rengi;
 var harf_koordinatlar=["A","B","C","D","E","F","G","H"];var sayi_koordinatlar=["1","2","3","4","5","6","7","8"];
@@ -370,16 +374,19 @@ window.anlık_hamle_yazma=function(prm_konum_1,prm_konum_2,prm_cins_1,prm_cins_2
         cins_1:prm_cins_1,
         cins_2:prm_cins_2
       };
-      if(hamle_konumları_esas.includes(p_verisi.konum_2)){
+      
+      if(son_hamle.cins_1.charAt(0)==p_verisi.cins_1.charAt(0)){// arka arkaya hamle yapmayı engelliyor
         hamle_konumları_esas=[];
-      
-        if((son_hamle.cins_1==p_verisi.cins_2)&&(son_hamle.cins_2==p_verisi.cins_1)){// oyunun döngüye girmesini engelliyor
-          alert("BU HAMLEYİ YAPAMAZSINIZ");
-      
-        }else{
-        const updates = {};
-        updates['Odalar/' + oda_id] = p_verisi;
-        return update(ref(getDatabase()), updates);
+      }else{
+        if(hamle_konumları_esas.includes(p_verisi.konum_2)){//
+        
+          if((son_hamle.cins_1==p_verisi.cins_2)&&(son_hamle.cins_2==p_verisi.cins_1)){// oyunun döngüye girmesini engelliyor
+            alert("BU HAMLEYİ YAPAMAZSINIZ");
+          }else{
+          const updates = {};
+          updates['Odalar/' + oda_id] = p_verisi;
+          return update(ref(getDatabase()), updates);
+          }
         }
       }
     } else {
@@ -387,7 +394,7 @@ window.anlık_hamle_yazma=function(prm_konum_1,prm_konum_2,prm_cins_1,prm_cins_2
     }}).catch((error) => { console.error(error);});
 }
 window.tetik=function(){ //tetik çalıştığında ilgili odaya girip verileri alıyor 
-  //console.log('tetik bir çalıştı yani');
+  
   if(oda_id==='ODAİDBİLGİ'){
     oda_id=document.getElementById('oda_id_bilgi').innerHTML;
     path='Odalar/'+oda_id+'/';
@@ -397,9 +404,7 @@ window.tetik=function(){ //tetik çalıştığında ilgili odaya girip verileri 
     
     onValue(commentsRef, (data) => {
       if(data){
-        //console.log(' tetik value hamle algılandı');
-        //console.log(path);
-        //console.log(data.val());
+        
         var dbden_çekilen_veriler=data.val();
 
         //console.log('güncel path:  '+path);
@@ -410,6 +415,7 @@ window.tetik=function(){ //tetik çalıştığında ilgili odaya girip verileri 
   }
 }
 window.anlık_hamle_görselleştirme=function(çekilen_veri){// tetik sonrası okunan verilere göre oyun tahtası görüntüsünü düzenliyor görseli düzenliyor
+  
   if(çekilen_veri.cins_1!=''){
     var konum_1=çekilen_veri.konum_1;
     var konum_2=çekilen_veri.konum_2;
@@ -439,6 +445,10 @@ window.anlık_hamle_görselleştirme=function(çekilen_veri){// tetik sonrası o
       var mesaj='Oyun Bitti Siyah Kazandı';
       alert_bildirim(mesaj);
     }
+
+
+    if(çekilen_veri.p2_name){document.getElementById('rakip_durumu').innerHTML=çekilen_veri.p2_name;}
+    if(çekilen_veri.p2_name==document.getElementById('oyuncu_ismi').innerHTML){document.getElementById('rakip_durumu').innerHTML=çekilen_veri.p1_name;}
   }
   return son_hamle;
 
@@ -457,6 +467,11 @@ window.alert_bildirim=function(prm_mesaj){
   document.getElementById("alert_mesaj").innerHTML=prm_mesaj;
 
 }
+
+window.addEventListener('beforeunload', (event) => {
+  event.returnValue = `Are you sure you want to leave?`;
+  
+});
 /*
 <------- VERİ TABANINA NASIL BAĞLANIYORUM-------->
 1- öncelikle nodejs kullanarak firebase modüllerilerini indirdim.
