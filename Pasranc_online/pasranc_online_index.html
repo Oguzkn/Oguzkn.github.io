@@ -12,7 +12,6 @@
             <p id="tasarımcı">design by OguzK</p>
 
             </div>
-
             <div id="sağbar">
 
             <div id="oda_kur_divi">
@@ -20,8 +19,9 @@
                     <p>Odayı Kur</p>
                 </div>
                 <div id="oda_kur_kart_arka">
+                    <input type="text" id="p1_ismi" placeholder="Kullanıcı Adı">
                     <input type="text" id="oda_kodu_belirleme_inputu" placeholder="ODA KODUNU BELİRLE " >
-                    <button id="oda_kur_butonu" onclick="oda_kur(document.getElementById('oda_kodu_belirleme_inputu').value,'AHMET')">ODA KUR</button>
+                    <button id="oda_kur_butonu" onclick="oda_kur(document.getElementById('oda_kodu_belirleme_inputu').value,document.getElementById('p1_ismi').value)">ODA KUR</button>
                 </div>
             </div>
             <div id="oda_katıl_divi">
@@ -29,8 +29,9 @@
                     <p>Odaya Katıl</p>
                 </div>
                 <div id="oda_katıl_kart_arka">
+                    <input type="text" id="p2_ismi" placeholder="Kullanıcı Adı ">
                     <input type="text" id="odaya_katıl_inputu" placeholder="ODAYA KATILMAK İÇİN" >
-                    <button id="odaya_katıl_butonu" onclick="oda_katıl(document.getElementById('odaya_katıl_inputu').value,'MEHMET')" >ODAYA KATIL</button>
+                    <button id="odaya_katıl_butonu" onclick="oda_katıl(document.getElementById('odaya_katıl_inputu').value,document.getElementById('p2_ismi').value)" >ODAYA KATIL</button>
                 </div>
                 
             </div>
@@ -38,11 +39,12 @@
             </div>
         </div>
         <div id="oda_id_bilgi">ODAİDBİLGİ</div>
-        <div id="alert_div">
-        <p id="alert_mesaj"></p>
-        </div>
+        <div id="alert_div"><p id="alert_mesaj"></p></div>
         <div id="oyun_ekranı">
-            <div id="oyun_ekran_üst_bar"></div>
+            <div id="oyun_ekran_üst_bar">
+                <p id="oyuncu_ismi"></p>
+                <p id="rakip_durumu"></p>
+            </div>
             <div id="oyun_ekran_alt_bar">
                 <div id="oyun_tahtası">
                     <div id="numaralar_ve_kareler">
