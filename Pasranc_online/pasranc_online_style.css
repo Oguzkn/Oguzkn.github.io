@@ -256,7 +256,7 @@ button{
         flex-direction: column ;
         width: 100vw;
         height: 100vh;
-        background: #000;
+        background: #0a2647;
         
     }
     #oyun_ekran_üst_bar{
@@ -264,8 +264,11 @@ button{
         flex-direction: row;
         justify-content: space-between;
         width: 100vw;
-        height: 15vh;
-        background-color: #4B4B4B;
+        height: 11vh;
+        background-color: #0a2647;
+        background-image: url(taşlar/BAŞLIK.png);
+        background-size: cover;
+        
        
     
     }
@@ -294,7 +297,7 @@ button{
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 85vh;
+        height: 89vh;
     }
     #oyun_tahtası{
         display: flex;
@@ -305,35 +308,45 @@ button{
     #numaralar_ve_kareler{
         display: flex;
         flex-direction: row;
+        width: 100vw;
+        height: 44vh;
+        background: #144272;
+        justify-content: center;
+        justify-items: center;
     }
     .kareler {
         width: 10vw;
         height: 9vw;
         border:1vw solid;
         border-color: #383e42;
-        background:#bdb76b;
+        background:#98c2ea;
         background-size: contain;
         font-size: 4vw;
     }
     #hamleler{
         width: 100vw;
-        height: fit-content;
-        background: #bdb76b;
+        height: 22vh;
+        background: #205295;
         
     }
     #hamleler_başlık{
-        background: #212529;
         width:100vw;
         height: 3vh;
-        color: #bdb76b;
         font-size: 5vw;
         margin: 0;
+        background-color: #2c74b3;
     }
     span_hamle{
         display: flex;
         flex-direction: column-reverse;
         margin: 1vh;
         flex-wrap: wrap;
+    }
+    #nasıl_oynanır{
+        background-color: #2c74b3;
+        width: 100vw;
+        height: 22vh;
+
     }
     
 }
