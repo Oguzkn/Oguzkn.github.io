@@ -138,7 +138,7 @@ window.hamle=function(prm_konum,prm_cins){ // hamle yapmanı sağlıyor <--- EN 
   }else{// ikinci buton seçilmişse bu block çalışır
     konum_2.push(prm_konum);cins_2.push(prm_cins);//ikinci konum ve taş cinsi verileri depolanır
     var a;
-    for (a=0;a<64;a++){document.getElementById(koordinatlar[a]).style.backgroundColor="#bdb76b";} // hamle yollarını gösteren renk değişimini sıfırlıyor 
+    for (a=0;a<64;a++){document.getElementById(koordinatlar[a]).style.backgroundColor="#98c2ea";} // hamle yollarını gösteren renk değişimini sıfırlıyor 
 
     anlık_hamle_yazma(konum_1[0],konum_2[0],cins_1[0],cins_2[0]);// hamleyi database e yolluyor
 
