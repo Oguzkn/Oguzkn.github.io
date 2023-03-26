@@ -134,6 +134,7 @@ window.hamle=function(prm_konum,prm_cins){ // hamle yapmanı sağlıyor <--- EN 
       oyuncu_rengi=prm_cins[0];
       
     }
+    hamle_konumları_esas = [];
     
   }else{// ikinci buton seçilmişse bu block çalışır
     konum_2.push(prm_konum);cins_2.push(prm_cins);//ikinci konum ve taş cinsi verileri depolanır
@@ -352,6 +353,7 @@ window.hamle=function(prm_konum,prm_cins){ // hamle yapmanı sağlıyor <--- EN 
         hamle_konum_bilgileri (olasi_bütün_konum,cins_1);
         
     }
+    
   }else{
     alert ("rakip taşı oynatamazsın");
     konum_1=[];cins_1=[];
