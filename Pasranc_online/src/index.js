@@ -1,6 +1,7 @@
 //---------------------------firebase bağlantı kısmı------------------>
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref,set,get,child, update ,onChildChanged, onValue} from "firebase/database";        
+import { getDatabase, ref,set,get,child, update ,onChildChanged, onValue} from "firebase/database";
+import { getAuth, signInAnonymously ,onAuthStateChanged} from "firebase/auth"; 
 const firebaseConfig = {
     apiKey: "AIzaSyCMa4_Q2TtXHZKjcgbiEFDWHQio_9-f4j0",
     authDomain: "oguzk-1467d.firebaseapp.com",
@@ -12,6 +13,18 @@ const firebaseConfig = {
     measurementId: "G-B70BV83C80"
 };   
 const app = initializeApp(firebaseConfig); const db = getDatabase(app);
+const auth = getAuth();
+signInAnonymously(auth)
+  .then(() => {
+    // Signed in..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ...
+  });
+  
+
 //--------------------------her kısımndan erişileccek fonksiyon ve tanımlar-------------------->
 //--------------------------oyun giriş ekranı  kısmı fonksiyonları ve tanımlamaları ---------------->
 window.oda_kur= function (prm_oda_id, prm_p1_id) {
