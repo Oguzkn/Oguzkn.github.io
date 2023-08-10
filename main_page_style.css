@@ -1,0 +1,147 @@
+html,body{
+    background: #D9D9D9;
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+}
+#p_0{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    font-family: Goldman ,sans-serif;
+    font-size: 120px;
+    
+}
+#div_content{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.box{
+  background: #000;
+  margin: 2.5%;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#p_1,#p_2,#p_3,#p_4,#p_5,#p_6{
+
+  color: #fff;
+  font-family: Goldman;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 65px;
+
+  margin: 55px 0 0 0;
+}
+
+#p_2{
+  margin: 20px 0 0 0;
+}
+#p_3{
+  margin: 55px 0 0 0;
+}
+
+.material-symbols-outlined.arrow_forward_ios{
+  display: none;
+}
+.material-symbols-outlined.chess,
+.material-symbols-outlined.group,
+.material-symbols-outlined.circle{
+
+  color: #fff;
+  font-size: 250px;
+  margin: 0 auto;
+  fill: none;
+}
+
+
+/* TABLET EKRANI */
+@media (max-width: 1439px) {
+  
+  #p_0{
+    font-size: 85px;
+    margin: 25% 0px 15% 0;
+  }
+
+  #div_content{
+    grid-template-columns:repeat(2,1fr);
+  }  
+
+  .box{
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+    width: 400px;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  #p_1,#p_2,#p_3,#p_4,#p_5,#p_6{
+    margin: 0;
+    font-size: 40px;
+  }
+
+  .material-symbols-outlined.arrow_forward_ios,
+  .material-symbols-outlined.chess,
+  .material-symbols-outlined.group,
+  .material-symbols-outlined.circle{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 2% 5% 2%;
+    font-size: 64px;
+    fill: none;
+  }
+}  
+/* MOBİL EKRAN */
+@media (max-width: 800px) {
+  #p_0{
+    font-size: 40px;
+    margin: 165px 0 85px 0px;
+  }
+  
+  #div_content{
+    grid-template-columns:repeat(1,1fr);
+  }
+
+  .box{
+
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  #p_1,#p_2,#p_3,#p_4,#p_5,#p_6{
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .material-symbols-outlined.arrow_forward_ios,
+  .material-symbols-outlined.chess,
+  .material-symbols-outlined.group,
+  .material-symbols-outlined.circle {
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 5% 2% 5% 2%;
+    font-size: 24px;
+    fill: none;
+    
+  }
+}
+
