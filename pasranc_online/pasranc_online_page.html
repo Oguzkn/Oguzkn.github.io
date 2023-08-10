@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasranç Online Login</title>
+
+    <link rel="stylesheet" href="pasranc_online_page.css">
+    
+    <!---<script src="pasranc_online_page.js"></script>-->
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <script>
+        function effect_create_room() {
+        const box1Back = document.getElementById("box_1_back");
+        const p1 = document.getElementById("p_1");
+        const box1 = document.getElementById("box_1");
+        const screenWidth = window.innerWidth;
+
+        box1Back.style.display = 'flex';
+        
+        if (screenWidth >= 1920){
+            p1.style.fontSize = "50px";
+        }else if (screenWidth >= 400){
+            p1.style.fontSize = "20px";
+        }
+        p1.style.color = "#000";
+        box1.style.backgroundColor = "#fff";
+        }
+
+        function effect_join_room() {
+        const box2Back = document.getElementById("box_2_back");
+        const p2 = document.getElementById("p_2");
+        const box2 = document.getElementById("box_2");
+        const screenWidth = window.innerWidth;
+
+        box2Back.style.display = 'flex';
+        
+        if (screenWidth >= 1920){
+            p2.style.fontSize = "50px";
+        }else if(screenWidth >= 400){
+            p2.style.fontSize = "20px";
+        }
+        p2.style.color = "#fff";
+        box2.style.backgroundColor = "#000";
+        }
+
+        function effect_stoper() {
+        const box1Back = document.getElementById("box_1_back");
+        const p1 = document.getElementById("p_1");
+        const box1 = document.getElementById("box_1");
+
+        const box2Back = document.getElementById("box_2_back");
+        const p2 = document.getElementById("p_2");
+        const box2 = document.getElementById("box_2");
+
+        box1Back.style.display = 'none';
+        box1.style.backgroundColor = "#000";
+        p1.style.color = "#fff";
+
+        box2Back.style.display = 'none';
+        box2.style.backgroundColor = "#fff";
+        p2.style.color = "#000";
+        }
+
+    </script>
+
+    <div id="login_page" >
+        
+        <div id="div_p_0" onclick="effect_stoper()">
+            <p id="p_0_login">Pasranç ONLINE</p>
+        </div>
+        <div id="div_content" >
+            <div id="box_1" onclick="effect_create_room()">
+                <p id="p_1">ODA OLUŞTUR</p>
+                <div id="box_1_back">
+                    <p id="name_text_1">İsim :</p>
+                    <input id="name_input_1" type="text">
+                    <p id="room_text_1">Oda No :</p>
+                    <input id="room_input_1" type="text">
+                    <input id="create_room_button" type="button" value="OLUŞTUR" onclick="create_room(document.getElementById('room_input_1').value,document.getElementById('name_input_1').value)">
+                </div>
+            </div>
+            <div id="box_2"  onclick="effect_join_room()">
+                <p id="p_2">ODAYA KATIL</p>
+                <div id="box_2_back">
+                    <p id="name_text_2">İsim :</p>
+                    <input id="name_input_2" type="text">
+                    <p id="room_text_2">Oda No :</p>
+                    <input id="room_input_2" type="text">
+                    <input id="join_room_button" type="button" value="KATIL" onclick="join_room(document.getElementById('room_input_2').value,document.getElementById('name_input_2').value)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="room_no_info">RoomNoInfo
+    </div>
+    <div id="game_page">
+        <div id="div_p_0_game">
+            <p id="p_0_game">Pasranç ONLINE</p>
+        </div>
+        <div id="div_game">
+            <div class="div_gamer_name d1"><p id="gamer_name_1">Player1</p></div>
+            <div id="counter_1">00.00</div>
+            <div id="game_board">
+                <div class="square" id="A1" title="b_1_kale"  onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ kale.svg);">A1</div>
+                <div class="square" id="B1" title="b_1_at"    onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ at.svg);">B</div>
+                <div class="square" id="C1" title="b_1_fil"   onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ fil.svg);">C</div>
+                <div class="square" id="D1" title="b_1_vezir" onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ vezir.svg);">D</div>
+                <div class="square" id="E1" title="b_1_şah"   onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ kral.svg);">E</div>
+                <div class="square" id="F1" title="b_2_fil"   onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ fil.svg);">F</div>
+                <div class="square" id="G1" title="b_2_at"    onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ at.svg);">G</div>
+                <div class="square" id="H1" title="b_2_kale"  onclick="move(id,title)" style="background-image: url(taşlar/beyaz\ kale.svg);">H</div>
+
+                <div class="square" id="A2" title="b_1_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);">2</div>
+                <div class="square" id="B2" title="b_2_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);"></div>
+                <div class="square" id="C2" title="b_3_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);" ></div>
+                <div class="square" id="D2" title="b_4_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);"></div>
+                <div class="square" id="E2" title="b_5_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);"></div>
+                <div class="square" id="F2" title="b_6_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);"></div>
+                <div class="square" id="G2" title="b_7_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);"></div>
+                <div class="square" id="H2" title="b_8_piyon" onclick="move(id,title)" style="background-image:url(taşlar/beyaz\ piyon.svg);"></div>
+
+                <div class="square" id="A3" title="BOŞ" onclick="move(id,title)">3</div>
+                <div class="square" id="B3" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="C3" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="D3" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="E3" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="F3" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="G3" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="H3" title="BOŞ" onclick="move(id,title)"></div>
+
+                <div class="square" id="A4" title="BOŞ" onclick="move(id,title)">4</div>
+                <div class="square" id="B4" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="C4" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="D4" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="E4" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="F4" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="G4" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="H4" title="BOŞ" onclick="move(id,title)"></div>
+
+                <div class="square" id="A5" title="BOŞ" onclick="move(id,title)">5</div>
+                <div class="square" id="B5" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="C5" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="D5" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="E5" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="F5" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="G5" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="H5" title="BOŞ" onclick="move(id,title)"></div>
+
+                <div class="square" id="A6" title="BOŞ" onclick="move(id,title)">6</div>
+                <div class="square" id="B6" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="C6" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="D6" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="E6" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="F6" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="G6" title="BOŞ" onclick="move(id,title)"></div>
+                <div class="square" id="H6" title="BOŞ" onclick="move(id,title)"></div>
+
+                <div class="square" id="A7" title="s_1_piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);">7</div>
+                <div class="square" id="B7" title="s_2_piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);"></div>
+                <div class="square" id="C7" title="s_3_piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);"></div>
+                <div class="square" id="D7" title="s_4_piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);"></div>
+                <div class="square" id="E7" title="s_5_piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);"></div>
+                <div class="square" id="F7" title="s_6-piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);"></div>
+                <div class="square" id="G7" title="s_7_piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);"></div>
+                <div class="square" id="H7" title="s_8_piyon" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ piyon.svg);"></div>
+                
+                <div class="square" id="A8" title="s_1_kale"  onclick="move(id,title)" style="background-image:url(taşlar/siyah\ kale.svg);">8</div>
+                <div class="square" id="B8" title="s_1_at"    onclick="move(id,title)" style="background-image:url(taşlar/siyah\ at.svg);"></div>
+                <div class="square" id="C8" title="s_1_fil"   onclick="move(id,title)" style="background-image:url(taşlar/siyah\ fil.svg);"></div>
+                <div class="square" id="D8" title="s_1_vezir" onclick="move(id,title)" style="background-image:url(taşlar/siyah\ vezir.svg);"></div>
+                <div class="square" id="E8" title="s_1_şah"   onclick="move(id,title)" style="background-image:url(taşlar/siyah\ kral.svg);"></div>
+                <div class="square" id="F8" title="s_2_fil"   onclick="move(id,title)" style="background-image:url(taşlar/siyah\ fil.svg);"></div>
+                <div class="square" id="G8" title="s_2_at"    onclick="move(id,title)" style="background-image:url(taşlar/siyah\ at.svg);"></div>
+                <div class="square" id="H8" title="s_2_kale"  onclick="move(id,title)" style="background-image:url(taşlar/siyah\ kale.svg);"></div>
+            
+
+                
+            </div>
+            <div class="div_gamer_name d2"><p id="gamer_name_2">Yükleniyor...</p></div>
+        </div>
+    </div>
+    <div id="div_alert">
+        <p id="message"></p>
+        <span class="material-symbols-outlined refresh" onclick="window.location.reload();">refresh</span>
+    </div>
+    
+</body>
+<script src="bundle.js"></script>
+</html>
